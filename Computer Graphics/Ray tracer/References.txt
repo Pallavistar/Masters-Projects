@@ -1,0 +1,8 @@
+Parser for obj file-
+https://github.com/syoyo/tinyobjloader
+
+Intersection algorithm-
+http://geomalgorithms.com/a06-_intersect-2.html#intersect3D_RayTriangle()
+
+Help in resolving some bugs I had in illumination-
+Nikhil Nayak (from same batch).
