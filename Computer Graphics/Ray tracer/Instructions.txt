@@ -1,4 +1,4 @@
-window.txt
+The code supports arbitrary window size. Give the input in the file window.txt
 It should hold 4 integers seperated by a space as below-
 1- window length in pixels
 2- window height in pixels

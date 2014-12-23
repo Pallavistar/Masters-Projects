@@ -1,0 +1,4 @@
+1. A purely c++ program, without using OpenGL, that functions as a ray tracer.
+2. An experimental program to learn different aspects of OpenGL. 
+3. A beginners hands-on with GLSL shaders. A simple program to understand and experiment with shaders.
+4. One program that binds them all- a game using all graphics concepts learned so far.
