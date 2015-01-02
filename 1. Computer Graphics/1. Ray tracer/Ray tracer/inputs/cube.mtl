@@ -1,0 +1,29 @@
+newmtl left
+Ka .1 .6 .1
+Kd 0 1 0
+Ks 0 0 0 
+
+newmtl right
+Ka .6 .1 .1
+Kd 1 0 0
+Ks 0 0 0
+
+newmtl gray_top
+Ka .3 .3 .3
+Kd 0.3 0.3 0.3
+Ks 0 0 0
+
+newmtl gray_far
+Ka .3 .3 .3
+Kd 0.3 0.3 0.3
+Ks 0 0 0
+
+newmtl gray_bottom
+Ka .3 .3 .3
+Kd 0.3 0.3 0.3
+Ks 0 0 0
+
+newmtl light0
+Ka 1 1 1
+Kd 1 1 1
+Ks 1 1 1

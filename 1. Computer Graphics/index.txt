@@ -1,0 +1,16 @@
+Index
+================
+
+Brief intro of each program in this folder.
+
+1. Ray tracer- A purely C++ program, without using OpenGL, that implements ray tracing algorithm.
+
+2. OpenGL- A program to explore different aspects of OpenGL. 
+
+3. GLSL- A beginners hands-on with GLSL shaders. A simple program to understand and experiment with shaders.
+
+4. Space Invaders- One program that binds them all- a game using all graphics concepts learned so far.
+
+System specifications- 
+Windows 7-32 bit
+Visual C++ 2010

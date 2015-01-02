@@ -1,0 +1,1 @@
+This program uses 2 different fragment shaders to display input object using either Blinn-Phong shading or toon shader. They can be switched by pressing key 'T'. The object auto rotates to show the shading effect better.
