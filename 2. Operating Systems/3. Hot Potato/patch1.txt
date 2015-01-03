@@ -1,0 +1,17 @@
+diff final3/master.c final4/master.c
+179a180,181
+>           {
+>    	    len = send (p[i], (int*)mypotato, sizeof (int) * (hops + 1),0);
+180a183
+> 	   }
+Only in final4: master.c~
+diff final3/player.c final4/player.c
+214c214
+< 
+---
+>         if (mypotato[0]< 0) break;
+216a217
+> 		mypotato[0]=-1;
+242a244
+> close (s); close(left); close(pr); close(pl);
+Only in final4: player.c~

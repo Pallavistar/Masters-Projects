@@ -1,0 +1,4 @@
+This patch should fix most of the basic test cases.
+Changes made-
+1. Changed size input from Bytes to MB
+2. removed a bug from rmdir.

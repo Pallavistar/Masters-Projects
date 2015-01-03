@@ -1,0 +1,71 @@
+--- ramdisk.c	2014-12-09 07:39:04.000000000 -0500
++++ ramdisk1214.c	2014-12-15 05:28:41.000000000 -0500
+@@ -385,17 +385,31 @@
+ 	int found =0;
+ 	char * dir = malloc (strlen(dirname));
+ 	strcpy(dir,dirname);
++	dir = strtok(dir,"/");
+ 
+ 	if(temp->subdir != NULL){
+ 		printf("checking subdir %s %s\n", temp->name, temp->subdir->name);
+ 		if (!strcmp (temp->subdir->name, dir))
++		{
++			if (temp->subdir->nextdir != NULL)
++				temp->subdir = temp->subdir->nextdir;
++			else
++				temp->subdir = NULL;
+ 			found =1;
++			curSize-=sizeof(diskds);
++		}
+ 		else{
+ 			printf("subdir doesnot match\n");
+ 			temp = temp->subdir;
+ 			while (temp->nextdir != NULL && found ==0){
+ 				if (!strcmp (temp->nextdir->name, dir))
++				{
++					if (temp->nextdir->nextdir !=NULL)
++						temp->nextdir = temp->nextdir->nextdir;
++					else temp->nextdir = NULL;
+ 					found =1;
++					curSize-=sizeof(diskds);
++				}
+ 				else temp = temp->nextdir;
+ 			}
+ 		}
+@@ -404,18 +418,6 @@
+ 		return -ENOENT;
+ 	printf("node to remove is found\n");
+ 	// IMPORTANT do the size adjustments
+-
+-	if (!strcmp (temp->nextdir->name, dir)) {
+-		if (temp->nextdir->nextdir !=NULL)
+-			temp->nextdir = temp->nextdir->nextdir;
+-		else temp->nextdir = NULL;
+-	}
+-	else if (!strcmp (temp->subdir->name, dir)){
+-		if (temp->subdir->nextdir != NULL)
+-			temp->subdir = temp->subdir->nextdir;
+-		else
+-			temp->subdir = NULL;
+-	}
+ 	printf("Deleted, exiting rmdir\n");
+ 	return 0;
+ }
+@@ -444,7 +446,7 @@
+ 	}
+ 	else if (argc==4){ 
+ 		ecpath = argv[3];
+-		mainSize = atoi (argv[2]); 
++		mainSize = (atoi (argv[2]))*1024; 
+ 		if (mainSize <=0){
+ 			printf("Size should be greater than zero\n");
+ 			exit(0);
+@@ -452,7 +454,7 @@
+ 	}
+ 	else if (argc ==3){
+ 		printf ("No path specified! Starting up a fresh (empty) filesystem.\n");
+-		mainSize = atoi (argv[2]);
++		mainSize = (atoi (argv[2]))*1024; 
+ 		if (mainSize <=0){
+ 			printf("Size should be greater than zero\n");
+ 			exit(0);

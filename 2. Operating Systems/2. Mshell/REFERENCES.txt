@@ -1,0 +1,8 @@
+Logic for parsing- Dr. Vincent Freeh.
+
+www-cs.canisius.edu
+embeddedgurus.com
+sourceware.org
+lists.gnu.org
+linux.die.net
+

@@ -1,0 +1,14 @@
+Index
+================
+
+Brief intro of each program in this folder.
+
+1. Threading library- C library functioning similar to pthread library
+
+2. Mshell- A shell script similar to c-shell.
+
+3. Hot potato- Chilhood game implementation using TCP/IP sockets
+
+4. FuseFS- File system using FUSE.
+
+System specifications- Red Hat Enterprise Linux 6 environment.
