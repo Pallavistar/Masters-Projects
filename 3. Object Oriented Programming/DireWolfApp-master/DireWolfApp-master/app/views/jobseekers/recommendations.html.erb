@@ -1,0 +1,20 @@
+<h2>Recommended Jobs for you (based on your application history):</h2>
+
+<%= link_to 'View consolidated recommendations', consolidated_recommendations_path %><br>
+
+<h3>Recommendations by Tags:</h3>
+<%= render 'jobs_table' %><br>
+
+<% @jobs = @jobs_cat %>
+<h3>Recommendations by Categories:</h3>
+<%= render 'jobs_table' %><br>
+
+<% @jobs = @jobs_emp %>
+<h3>Recommendations by Employers:</h3>
+<%= render 'jobs_table' %>
+
+<br>
+
+
+<br>
+<%= link_to 'Back to home', jobseeker_home_path %><br>

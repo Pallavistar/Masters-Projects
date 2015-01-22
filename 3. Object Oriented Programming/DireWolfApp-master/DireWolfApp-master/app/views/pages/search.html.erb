@@ -1,0 +1,18 @@
+<h1>Search Results for: <%= @search_string %></h1>
+
+<%= render 'search_form' %>
+
+<%= render 'jobseekers/jobs_table' %>
+
+<br>
+<% if session[:user_id] %>
+    <% if(Jobseeker.find(session[:user_id])) %>
+        <% back = jobseeker_home_path %>
+    <% else %>
+        <% back = pages_home_path %>
+    <% end %>
+<% else %>
+    <% back = pages_home_path %>
+<% end %>
+
+<%= link_to 'Back', back %>

@@ -1,0 +1,38 @@
+<h1>Editing profile</h1>
+
+<%= form_for(@employer, as: :employer, url: update_employer_profile_path) do |f| %>
+    <% if @employer.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@employer.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+          <ul>
+            <% @employer.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :name, "Company Name" %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :email %><br>
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :phone %><br>
+      <%= f.text_field :phone %>
+    </div>
+    <div class="field">
+      <%= f.label :contact_name, "Employer POC name" %><br>
+      <%= f.text_field :contact_name %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
+
+<br><%= link_to 'Change Password', new_employer_pass_path %><br>
+<%= link_to 'Back', employer_profile_path %>

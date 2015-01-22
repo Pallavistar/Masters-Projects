@@ -1,0 +1,15 @@
+<h1>Hello, <%= @this_user.name.titleize %>!</h1>
+<h2>Available Jobs:</h2>
+
+<%= render 'pages/search_form' %>
+
+<%= render 'jobs_table' %>
+
+<br>
+
+
+<br>
+<%= link_to 'My Applications', view_applications_path %>&nbsp;|
+<%= link_to 'My Profile', jobseeker_profile_path %>&nbsp;|
+<%= link_to 'DireWolf Recommends', recommendations_path %><br>
+<%= link_to 'Log out', log_out_path %>

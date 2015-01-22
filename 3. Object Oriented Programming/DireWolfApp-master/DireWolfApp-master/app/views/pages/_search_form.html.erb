@@ -1,0 +1,21 @@
+<%= form_tag("/search", method: "get") do %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag(:q, @search_string, select_all: true) %>
+    <% select_tag :search_type,
+                  options_for_select(["Job Titles","Job Description","Employer","Tags"],["Employer","Tags"]),
+                  multiple: true
+    %>
+
+    <%= check_box_tag(:titles, 1, @titles_true) %>
+    <%= label_tag(:titles, "Job Titles") %>
+    <%= check_box_tag(:desc, 1, @desc_true) %>
+    <%= label_tag(:desc, "Job Descriptions") %>
+    <%= check_box_tag(:emp, 1, @emp_true) %>
+    <%= label_tag(:emp, "Employers") %>
+    <%= check_box_tag(:cat, 1, @cat_true) %>
+    <%= label_tag(:cat, "Category") %>
+    <%= check_box_tag(:tags, 1, @tags_true) %>
+    <%= label_tag(:tags, "Tags") %>
+    <%= submit_tag("Search") %>
+
+<% end %><br>

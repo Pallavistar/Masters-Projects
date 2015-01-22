@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+
+<%= render "jobs/show_job" %>
+<% unless @applied %>
+    <%= link_to 'Apply', apply_job_path(@job) %> |
+<% end %>
+<%= link_to 'Back', jobseeker_home_path %>

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+Pallavi:
+  name: 'Pallavi'
+  email: 'pallavi1206@yahoo.com'
+  username: 'Pal12'
+  password_hash: 'e4c3fbeb8eb8754e7f5a002abae770b7beedd4d035fed7f97e9d6bd654813a85'
+  password_salt: 'bb069a676ab6ce050da16dcbfeb66501'
+  phone: 565
+  contact_name: 'sdf'
+  skills: nil
+  resume: nil
+  type: 'Jobseeker'
+
+Erik:
+  name: 'Erik'
+
+Google:
+  name: 'Google'
+  type: 'Employer'
+
+AdminUser:
+  name: 'testadmin'
+  username: 'testa'
+  type: 'Admin'

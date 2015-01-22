@@ -1,0 +1,32 @@
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @user.username %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @user.phone %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @user.contact_name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @user.type %>
+</p>
+
+<%= link_to 'Edit', edit_employer_path(@user) %> |
+<%= link_to 'Back', users_path %>

@@ -1,0 +1,29 @@
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @user.username %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @user.phone %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @user.type %>
+</p>
+
+<% unless(@user.username == "super") %>
+    <%= link_to 'Edit', edit_user_path(@user) %> |
+<% end %>
+<%= link_to 'Back', users_path %>

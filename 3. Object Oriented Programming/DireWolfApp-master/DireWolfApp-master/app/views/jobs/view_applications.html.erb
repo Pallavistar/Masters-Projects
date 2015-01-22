@@ -1,0 +1,34 @@
+<h2>Your Job applications:</h2>
+
+<table>
+  <thead>
+  <tr>
+    <th>Applicant Name</th>
+    <th>Application Date</th>
+    <th>Resume</th>
+    <th>Cover Letter</th>
+    <th>Status</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @applications.each do |application| %>
+      <tr>
+        <% job_seeker = @jobseekers.find(application.jobseeker_id) %>
+        <td><%= job_seeker.name %></td>
+        <td><%= application.application_date %></td>
+        <td><%= job_seeker.resume %></td>
+        <td><%= application.cover_letter %></td>
+        <td><%= application.status %></td>
+        <td><%= link_to 'Update status', change_status_path(application) %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<br>
+<%= link_to 'Back', employer_home_path %>&nbsp;

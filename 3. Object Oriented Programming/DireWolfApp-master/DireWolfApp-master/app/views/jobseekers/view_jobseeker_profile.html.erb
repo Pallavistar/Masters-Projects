@@ -1,0 +1,35 @@
+<h1>My Profile</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @jobseeker.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @jobseeker.email %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @jobseeker.username %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @jobseeker.phone %>
+</p>
+
+<p>
+  <strong>Skills:</strong>
+  <%= @jobseeker.skills %>
+</p>
+
+<p>
+  <strong>Resume:</strong>
+  <%= @jobseeker.resume %>
+</p>
+
+
+<%= link_to 'Edit', edit_jobseeker_profile_path %> |
+<%= link_to 'Back', jobseeker_home_path %>

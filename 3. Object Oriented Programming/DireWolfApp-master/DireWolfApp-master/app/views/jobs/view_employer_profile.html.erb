@@ -1,0 +1,29 @@
+<h1>My Profile</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @employer.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @employer.email %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @employer.username %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @employer.phone %>
+</p>
+
+<p>
+  <strong>Contact person name:</strong>
+  <%= @employer.contact_name %>
+</p>
+
+<%= link_to 'Edit', edit_employer_profile_path %> |
+<%= link_to 'Back', employer_home_path %>

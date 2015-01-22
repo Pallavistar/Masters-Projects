@@ -1,0 +1,29 @@
+<h2>Your Job applications:</h2>
+
+<table>
+  <thead>
+  <tr>
+    <th>Job title</th>
+    <th>Application date</th>
+    <th>Status</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @jobapplications.each do |jobapplication| %>
+      <tr>
+        <td><%= @jobs.find(jobapplication.job_id).title %></td>
+        <td><%= jobapplication.application_date %></td>
+        <td><%= jobapplication.status %></td>
+        <td><%= link_to 'Show', view_application_path(jobapplication) %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<br>
+<%= link_to 'Back', jobseeker_home_path %>&nbsp;

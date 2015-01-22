@@ -1,0 +1,7 @@
+emp:
+  name: MyString
+  Username: MyString
+  password_hash: MyString
+  password_salt: MyString
+  Contact_name: MyString
+  Email: MyString

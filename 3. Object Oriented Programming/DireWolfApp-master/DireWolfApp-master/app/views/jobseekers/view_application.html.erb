@@ -1,0 +1,31 @@
+<p>
+  <strong>Employer:</strong>
+  <%= @employer.name %>
+</p>
+
+<p>
+  <strong>Job title:</strong>
+  <%= @job.title %>
+</p>
+
+<p>
+  <strong>Job description:</strong>
+  <%= @job.description %>
+</p>
+
+<p>
+  <strong>Cover letter:</strong>
+  <%= @application.cover_letter %>
+</p>
+
+<p>
+  <strong>Application date:</strong>
+  <%= @application.application_date %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @application.status %>
+</p>
+
+<%= link_to 'Back', view_applications_path %>

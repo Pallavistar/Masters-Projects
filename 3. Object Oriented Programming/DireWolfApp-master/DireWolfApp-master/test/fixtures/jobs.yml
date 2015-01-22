@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+jobone:
+  title: "Developer"
+  description: MyText
+  employer_id: 1
+  category_id: 1
+  deadline: 2014-09-22
+
+jobtwo:
+  title: "Google"
+  description: MyText
+  employer_id: 1
+  category_id: 1
+  deadline: 2014-09-22

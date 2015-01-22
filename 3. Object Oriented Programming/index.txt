@@ -1,0 +1,2 @@
+Brief intro of program in this folder-
+Direwolf- A web application that acts as job portal for employers to post their jobs and employees to apply to them.
